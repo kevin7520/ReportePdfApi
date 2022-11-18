@@ -140,8 +140,8 @@ namespace ReportePdfApi.Controllers
                 Console.WriteLine("Posicicon X: "+posiscionImagenX+" Posicion Y : "+posiscionImagenY);
                 pdfDoc.Close();
                 FileStream stream = new FileStream("C:\\Users\\VIAMATICA\\Desktop\\HtmlPdfiu.pdf", FileMode.Open);
-                return File(stream, "application/pdf", "FileDownloadName.ext");
-            }
+                return File(stream, "application/pdf", "FileDownloadName.ext");//
+            }//
             catch (Exception ex)
             {
                 return NotFound("No se encontro el pdf => " + ex.Message);
